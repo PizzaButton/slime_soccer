@@ -5,7 +5,7 @@ class ball {
   ball() {
     x = new PVector(width/2,height/2);
     v = new PVector(0,0);
-    r = 40;
+    r = 20;
   }
 
   void render() {
@@ -32,6 +32,12 @@ class ball {
     if (x.y + r > height) {
       x.y = height - r;
       v.y = -v.y;
+    } if (x.x + r > width) {
+      x.x = width - r;
+      v.x = -v.x;
+    } if (x.x - r < 0) {
+      x.x = 0 + r;
+      v.x = -v.x;
     }
   }
 
