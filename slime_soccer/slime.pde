@@ -4,7 +4,7 @@ class slime {
   boolean jump, moveLeft, moveRight;
 
   slime() {
-    r = 100;
+    r = 60;
     x = new PVector(100, 100);
     v = new PVector(0, 0);
     jump = false;
