@@ -1,5 +1,6 @@
-04/10-2019 (sprint 1)
+04/10-2019 
 
+(SPRINT 1)
 Tummas:
 e)
 
@@ -12,3 +13,5 @@ d)
 Zimmer:
 a)
 b)
+
+(SPRINT 2)
