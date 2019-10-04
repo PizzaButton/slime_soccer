@@ -1,6 +1,7 @@
 class slime {
   PVector x, v;
   float r;
+  float eyesize;
   boolean jump, moveLeft, moveRight;
 
   slime() {
@@ -10,6 +11,8 @@ class slime {
     jump = false;
     moveLeft = false;
     moveRight = false;
+    
+    eyesize = 16;
   }
 
   void render() {
@@ -18,6 +21,12 @@ class slime {
     ellipse(x.x, x.y, 2*r, 2*r);
     fill(255);
     rect(x.x-r, x.y, 2*r, r);
+    
+    // Eyes:
+    fill(245);
+    ellipse(x.x+r/1.8, x.y-r/1.6, eyesize*2, eyesize*2);    
+    fill(20);
+    ellipse(x.x+r/1.8, x.y-r/1.6, eyesize, eyesize);
   }
 
   void update() {
