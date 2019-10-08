@@ -13,6 +13,11 @@ void setup() {
 void draw() {
   background(255);
   
+  textSize(32);
+  textMode(CENTER);
+  text("score:", 500, 50);
+  text(score, 600, 50);
+  
   //stolper
   fill(0);
   rect(5, 470, 10, 130);
