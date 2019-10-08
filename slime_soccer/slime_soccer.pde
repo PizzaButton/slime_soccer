@@ -12,17 +12,18 @@ void setup() {
 
 void draw() {
   background(255);
-  
+
+  //pointtæller
   textSize(32);
   textMode(CENTER);
   text("score:", 500, 50);
   text(score, 600, 50);
-  
+
   //stolper
   fill(0);
   rect(5, 470, 10, 130);
   rect(5, 470, 100, 10);
-  
+
   //vertikale linjer
   stroke(0);
   strokeWeight(2);
@@ -36,7 +37,7 @@ void draw() {
   line(70, 475, 70, 600);
   line(80, 475, 80, 600);
   line(90, 475, 90, 600);
-  
+
   //horisontale linjer
   line(10, 490, 98, 490);
   line(10, 500, 98, 500);
@@ -49,18 +50,31 @@ void draw() {
   line(10, 570, 98, 570);
   line(10, 580, 98, 580);
   line(10, 590, 98, 590);
-  
-  
-  
-  
+
+  //plusser én til scoren hver gang bolden rammer målet
+  if (b.x.x < 130) {
+    if (b.x.y > 480) {
+      score = score + 1;
+    }
+  }
+
+  //teleporterer bolden til midten af banen hver gang der scores
+  if (b.x.x < 130) {
+    if (b.x.y > 480) {
+      b.x.x = 600;
+      b.x.y = 300;
+      b.v.x = 0;
+      b.v.y = 0;
+    }
+  } 
+
+
 
   s.render();
   b.render();
 
   s.update();
   b.update();
-  
-    
 }
 
 void keyPressed() {
