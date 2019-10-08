@@ -1,4 +1,5 @@
 float g = 0.44;
+int score;
 ball b;
 slime s;
 
@@ -6,6 +7,7 @@ void setup() {
   size(1200, 600);
   b = new ball();
   s = new slime();
+  score = 0;
 }
 
 void draw() {
@@ -16,6 +18,8 @@ void draw() {
 
   s.update();
   b.update();
+  
+    
 }
 
 void keyPressed() {
