@@ -2,22 +2,37 @@ float g = 0.44;
 int score;
 ball b;
 slime s;
+int time;
+int framerate;
+boolean exit;
 
 void setup() {
   size(1200, 600);
   b = new ball();
   s = new slime();
   score = 0;
+  time = 120;
+  framerate = 60;
+  exit = false;
 }
 
 void draw() {
   background(255);
+  frameRate(framerate);
 
   //pointtæller
   textSize(32);
   textMode(CENTER);
   text("score:", 500, 50);
   text(score, 600, 50);
+
+  //tid-tæller
+  text(time, 1100, 50);
+  if (time >= 1) {
+    if (frameCount % 60 == 59) {
+      time = time - 1;
+    }
+  }
 
   //stolper
   fill(0);
@@ -75,6 +90,16 @@ void draw() {
 
   s.update();
   b.update();
+
+  if (time == 0) {
+    framerate = 0;
+    noStroke();
+    fill(150, 50);
+    rect(0, 200, 1200, 200);
+    fill(255);
+    textSize(100);
+    text("SCORE:" + score, 400, 350);
+  }
 }
 
 void keyPressed() {
@@ -86,7 +111,8 @@ void keyPressed() {
   }
   if (key == 'd') {
     s.moveRight = true;
-  }
+  } 
+
 }
 
 void keyReleased() {
