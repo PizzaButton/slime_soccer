@@ -45,8 +45,16 @@ class ball {
       v.x = -v.x;
     }
 
-    //bold hopper på mål
-    if (x.x < 130 && 485 > x.y) {
+    //bold hopper på venstre mål
+    if (x.x < 100 && 485 > x.y) {
+      if (x.y > 475) {
+        x.y = x.y - 5;
+        v.y = -v.y;
+      }
+    }
+    
+    //bold hopper på højre mål
+    if (x.x > 1087 && 485 > x.y) {
       if (x.y > 475) {
         x.y = x.y - 5;
         v.y = -v.y;
