@@ -137,9 +137,11 @@ void draw() {
 
   s.render();
   b.render();
+  s2.render();
 
   s.update();
   b.update();
+  s2.update();
 
   //Stopper spillet ved 0 sekubnder, og viser scorer og fremhæver vinder af kampen
   if (time == 0) {
