@@ -75,7 +75,7 @@ class ball {
     v.sub(PVector.mult(n, 2*PVector.dot(n, v)));
     x.add(n.setMag(distanceCor));
     x.add(s.v);
-    v.mult(1.5);
+    v.mult(1.65);
   }
   void bounce(slime2 s2) {
     PVector n = PVector.sub(x, s2.x2);
@@ -84,6 +84,6 @@ class ball {
     v.sub(PVector.mult(n, 2*PVector.dot(n, v)));
     x.add(n.setMag(distanceCor));
     x.add(s2.v2);
-    v.mult(1.5);
+    v.mult(1.65);
   }
 }
