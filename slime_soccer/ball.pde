@@ -19,13 +19,13 @@ class ball {
       bounce(s);
     } else {
       v.mult(0.99);
-      v.y += g;
+      v.y += g - 0.14;
     }
     if (dist(x.x, x.y, s2.x2.x, s2.x2.y) < r + s2.r) {
       bounce(s2);
     } else {
       v.mult(0.99);
-      v.y += g;
+      v.y += g - 0.14;
     } 
 
     if (x.y == 0) {
