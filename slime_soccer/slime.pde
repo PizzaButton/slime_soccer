@@ -11,7 +11,7 @@ class slime {
     jump = false;
     moveLeft = false;
     moveRight = false;
-    
+
     eyesize = 16;
   }
 
@@ -19,7 +19,7 @@ class slime {
     noStroke();
     fill(0, 255, 0);
     arc(x.x, x.y, 2*r, 2*r, PI, 2*PI);
-    
+
     // Eyes:
     fill(245);
     ellipse(x.x+r/1.8, x.y-r/1.6, eyesize*2, eyesize*2);    
@@ -29,7 +29,7 @@ class slime {
 
   void update() {
     v.y += g;
-    
+
     if (moveLeft) {
       v.x += -8;
     }
@@ -49,5 +49,13 @@ class slime {
     }
 
     v.x = 0;
+    if (x.x + r > width) {
+      x.x = width - r;
+      v.x = -v.x;
+    } 
+    if (x.x - r < 0) {
+      x.x = 0 + r;
+      v.x = -v.x;
+    }
   }
 }
