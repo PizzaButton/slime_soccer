@@ -2,6 +2,7 @@ float g = 0.44;
 int score1, score2;
 ball b;
 slime s;
+slime2 s2;
 int time;
 int framerate;
 boolean exit;
@@ -10,6 +11,7 @@ void setup() {
   size(1200, 600);
   b = new ball();
   s = new slime();
+  s2 = new slime2();
   score1 = 0;
   score2 = 0;
   time = 120;
@@ -174,6 +176,22 @@ void keyPressed() {
   if (key == 'd') {
     s.moveRight = true;
   }
+  // Slime 2
+  if (key == CODED) {
+    if (keyCode == UP) {
+      s2.jump = true;
+    }
+  }
+  if (key == CODED) {
+    if (keyCode == LEFT) {
+      s2.moveLeft = true;
+    }
+  }
+  if (key == CODED) {
+    if (keyCode == RIGHT) {
+      s2.moveRight = true;
+    }
+  } 
 }
 
 void keyReleased() {
@@ -182,5 +200,16 @@ void keyReleased() {
   }
   if (key == 'd') {
     s.moveRight = false;
+  }
+  //Slime 2
+  if (key == CODED) {
+    if (keyCode == LEFT) {
+      s2.moveLeft = false;
+    }
+  }
+  if (key == CODED) {
+    if (keyCode == RIGHT) {
+      s2.moveRight = false;
+    }
   }
 }

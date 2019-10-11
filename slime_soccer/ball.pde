@@ -21,6 +21,12 @@ class ball {
       v.mult(0.99);
       v.y += g;
     }
+    if (dist(x.x, x.y, s2.x2.x, s2.x2.y) < r + s2.r) {
+      bounce(s2);
+    } else {
+      v.mult(0.99);
+      v.y += g;
+    } 
 
     if (x.y == 0) {
       v.mult(0.7);
@@ -69,6 +75,15 @@ class ball {
     v.sub(PVector.mult(n, 2*PVector.dot(n, v)));
     x.add(n.setMag(distanceCor));
     x.add(s.v);
+    v.mult(1.5);
+  }
+  void bounce(slime2 s2) {
+    PVector n = PVector.sub(x, s2.x2);
+    float distanceCor = r + s2.r - n.mag();
+    n.normalize();
+    v.sub(PVector.mult(n, 2*PVector.dot(n, v)));
+    x.add(n.setMag(distanceCor));
+    x.add(s2.v2);
     v.mult(1.5);
   }
 }
