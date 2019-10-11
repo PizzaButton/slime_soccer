@@ -169,13 +169,13 @@ void draw() {
 }
 
 void keyPressed() {
-  if (key == 'w') {
+  if (key == 'w' || key == 'W') {
     s.jump = true;
   }
-  if (key == 'a') {
+  if (key == 'a' || key == 'A') {
     s.moveLeft = true;
   }
-  if (key == 'd') {
+  if (key == 'd' || key == 'D') {
     s.moveRight = true;
   }
   // Slime 2
@@ -197,10 +197,10 @@ void keyPressed() {
 }
 
 void keyReleased() {
-  if (key == 'a') {
+  if (key == 'a' || key == 'A') {
     s.moveLeft = false;
   }
-  if (key == 'd') {
+  if (key == 'd' || key == 'D') {
     s.moveRight = false;
   }
   //Slime 2
