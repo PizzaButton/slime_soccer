@@ -43,7 +43,7 @@ sprint 2 c) er færdiggjort, og vi er nu klar til at starte på sprint 3
 Sprint 3 (12:02)
 
 Tummas:
-a)
+a) [d)]
 
 Røntved:
 c)
@@ -53,3 +53,20 @@ d)
 
 Zimmer:
 b)
+
+11/10-2019 (12:33)
+Vi er nu "færdige" med sprint 3, bortset fra b). Da den ikke er nødvendig for projektets fortsættelse, og dens kompleksitet, vælger vi at gå videre med Sprint 4
+
+Sprint 4 (12:35)
+
+Tummas:
+b)
+
+Røntved:
+
+
+Menholt:
+
+
+Zimmer:
+a)
